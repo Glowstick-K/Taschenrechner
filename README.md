@@ -1,4 +1,4 @@
-#   Taschenrechner mit Grafischer Oberfläche
+#   Taschenrechner mit Grafischer Benutzer Oberfläche
 
 Programmiersprache:   
 Java
