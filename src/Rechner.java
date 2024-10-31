@@ -12,14 +12,17 @@ public class Rechner {
 
     public Rechner(TextField inputField) {
         this.inputField = inputField;
-
+        String ersteEingabe = inputField.getText();
     }
         //benutzte den Synonym "fish" anstast "text"//
 
         public void buttonClick(String fish) {
             String input = inputField.getText().trim();
+           // String input = inputField.getText(); //
             Double ergebniss = null;
-            if (fish.equals("=")) {
+
+            if (butt)
+            if (fish.equals(input)) {
                 if (input.contains("+")) {
                     ergebniss = berechne(input, "\\+", '+');
                 } else if (input.contains("-")) {
@@ -28,6 +31,7 @@ public class Rechner {
                     ergebniss = berechne(input, "\\*", '*');
                 } else if (input.contains("/")) {
                     ergebniss = berechne(input, "\\/", '/');
+
                 } else {
                     inputField.setText("Ungültiges Format! Bitte geben sie nur +*-/ ein.");
                 }
