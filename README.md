@@ -1,7 +1,7 @@
 #   Taschenrechner mit Grafischer Benutzer Oberfläche
 
 Programmiersprache:   
-Java""
+Java
 Version ==  1.8.0_291
 
 JDK               :          
