@@ -26,17 +26,20 @@ public class Main extends Application{
                 "7", "8", "9", "/",
                 "4", "5", "6", "*",
                 "1", "2", "3", "-",
-                "0", ".", "=", "+",
+                "0", ".", "+", "=",
                 "C"
         };
 
         int row = 1;
         int col = 0;
-        for (String text : buttons) {
-            Button button = new Button(text);
+
+        //benutzte den Synonym "fish" anstast "text"//
+
+        for (String fish : buttons) {
+            Button button = new Button(fish);
             button.setPrefWidth(50);
             button.setPrefHeight(50);
-            button.setOnAction(e -> calculator.handleButtonClick(text));
+            button.setOnAction(e -> calculator.buttonClick(fish));
             grid.add(button, col, row);
             col++;
             if (col == 4) {
@@ -55,6 +58,7 @@ public class Main extends Application{
         launch(args);
     }
 }
+
 
 /*import javafx.application.Application;
 import javafx.scene.Scene;
