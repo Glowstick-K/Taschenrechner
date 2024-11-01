@@ -3,24 +3,37 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 
 public class Main extends Application{
 
     private TextField display;
+    private TextField display2;
     @Override
     public void start(Stage primaryStage) {
+
         display = new TextField();
-        display.setEditable(false);
+        display.setEditable(true);
         display.setPrefWidth(200);
         display.setPrefHeight(50);
+
+        display2 = new TextField();
+        display2.setEditable(true);
+        display2.setPrefWidth(200);
+        display2.setPrefHeight(50);
+
+
 
         Rechner calculator = new Rechner(display);
 
         GridPane grid = new GridPane();
-        grid.add(display, 0, 0, 4, 1);
+        GridPane grid2 = new GridPane();
 
+
+        grid.add(display, 0, 0, 4, 1);
+        grid2.add(display2, 0, 0, 4, 1);
 
         String[] buttons = {
                 "7", "8", "9", "/",
@@ -33,7 +46,7 @@ public class Main extends Application{
         int row = 1;
         int col = 0;
 
-        //benutzte den Synonym "fish" anstast "text"//
+        //benutzte den Synonym "fish" anstatt "text"//
 
         for (String fish : buttons) {
             Button button = new Button(fish);
@@ -50,9 +63,10 @@ public class Main extends Application{
 
         Scene scene = new Scene(grid, 220, 300);
         primaryStage.setScene(scene);
-        primaryStage.setTitle("Taschenrechner");
+        primaryStage.setTitle("Rechner");
         primaryStage.show();
     }
+
 
     public static void main(String[] args) {
         launch(args);

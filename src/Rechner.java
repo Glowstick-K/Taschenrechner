@@ -7,40 +7,51 @@ import javafx.scene.control.TextField;
 
 
 public class Rechner {
-    TextField inputField;
+    TextField inputField1;
 
 
     public Rechner(TextField inputField) {
-        this.inputField = inputField;
+        this.inputField1 = inputField;
+
         String ersteEingabe = inputField.getText();
     }
         //benutzte den Synonym "fish" anstast "text"//
 
         public void buttonClick(String fish) {
-            String input = inputField.getText().trim();
-           // String input = inputField.getText(); //
+            String inputNum = inputField1.getText().trim();
+            //String inputtransfer = inputField2.getText();//
+
+            // String input = inputField.getText(); //
+
             Double ergebniss = null;
 
-            if (butt)
-            if (fish.equals(input)) {
-                if (input.contains("+")) {
-                    ergebniss = berechne(input, "\\+", '+');
-                } else if (input.contains("-")) {
-                    ergebniss = berechne(input, "\\-", '-');
-                } else if (input.contains("*")) {
-                    ergebniss = berechne(input, "\\*", '*');
-                } else if (input.contains("/")) {
-                    ergebniss = berechne(input, "\\/", '/');
+            //while (fish.)//
+
+            if (fish.equals("=")) {
+                if (inputNum.equals("+")) {
+                    /*inputField1.clear();
+                    inputField2.setText(inputNum);*/
+                    ergebniss = berechne(inputNum, "\\+", '+');
+                } else if (inputNum.contains("-")) {
+                    ergebniss = berechne(inputNum, "\\-", '-');
+                } else if (inputNum.contains("*")) {
+                    ergebniss = berechne(inputNum, "\\*", '*');
+                } else if (inputNum.contains("/")) {
+                    ergebniss = berechne(inputNum, "\\/", '/');
 
                 } else {
-                    inputField.setText("Ungültiges Format! Bitte geben sie nur +*-/ ein.");
+                    inputField1.setText("Ungültiges Format! Bitte geben sie nur +*-/ ein.");
                 }
-                inputField.setText(ergebniss.toString());
+                inputField1.setText(ergebniss.toString());
 
-            } else if (fish.equals("C")) {
-                inputField.clear();
+            } /*else if (fish.equals("+")) {
+                inputField1.clear();
+                inputField2.setText(inputNum);
+
+            }*/ else if (fish.equals("C")) {
+                inputField1.clear();
             } else {
-                inputField.setText(input + fish);
+                inputField1.setText(inputNum + fish);
                 return;
             }
 
